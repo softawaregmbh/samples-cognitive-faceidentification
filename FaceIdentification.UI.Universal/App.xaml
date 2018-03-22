@@ -2,7 +2,9 @@
     x:Class="FaceIdentification.UI.Universal.App"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:v="using:FaceIdentification.UI.Universal.Views"
+    xmlns:vm="using:FaceIdentification.UI.Universal.ViewModels"
     xmlns:local="using:FaceIdentification.UI.Universal"
     RequestedTheme="Light">
-
+    
 </Application>

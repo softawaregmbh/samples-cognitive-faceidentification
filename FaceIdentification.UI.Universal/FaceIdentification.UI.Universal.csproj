@@ -105,6 +105,9 @@
     <Compile Include="ViewModels\AddPersonViewModel.cs" />
     <Compile Include="ViewModels\CreateGroupViewModel.cs" />
     <Compile Include="ViewModels\RecognizeViewModel.cs" />
+    <Compile Include="Views\RecognizeView.xaml.cs">
+      <DependentUpon>RecognizeView.xaml</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <AppxManifest Include="Package.appxmanifest">
@@ -130,6 +133,10 @@
     <Page Include="MainPage.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\RecognizeView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
     </Page>
   </ItemGroup>
   <ItemGroup>
