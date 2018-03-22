@@ -1,0 +1,17 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <AssemblyName>FaceIdentification.CognitiveServices</AssemblyName>
+    <RootNamespace>FaceIdentification.CognitiveServices</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Azure.CognitiveServices.Vision.Face" Version="1.0.2-preview" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\FaceIdentification\FaceIdentification.csproj" />
+  </ItemGroup>
+
+</Project>
