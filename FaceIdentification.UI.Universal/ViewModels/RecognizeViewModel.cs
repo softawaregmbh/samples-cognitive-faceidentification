@@ -34,40 +34,9 @@ namespace FaceIdentification.UI.Universal.ViewModels
                 }
             });
 
-            this.AddPhotoCommand = new RelayCommand(async () =>
-            {
-                var photo = await this.camera.GetPhotoAsync();
-                await this.faceRecognizer.AddImageAsync(photo, this.Name);
-            });
-
             this.RecognizedFaces = new ObservableCollection<Face>();
         }
-
-        public async Task InitializeAsync()
-        {
-            if (! await this.faceRecognizer.IsGroupExistingAsync())
-            {
-                await this.faceRecognizer.CreateGroupAsync();
-            }
-        }
-
-        private Guid personGuid;
-
-        public Guid PersonGuid
-        {
-            get { return personGuid; }
-            set { this.Set(ref personGuid, value); }
-        }
-
-
-        private string name;
-
-        public string Name
-        {
-            get { return name; }
-            set { this.Set(ref name, value); }
-        }
-
+        
         private ObservableCollection<Face> recognizedFaces;
 
         public ObservableCollection<Face> RecognizedFaces
@@ -77,7 +46,5 @@ namespace FaceIdentification.UI.Universal.ViewModels
         }
 
         public ICommand TakePhotoCommand { get; private set; }
-
-        public ICommand AddPhotoCommand { get; private set; }
     }
 }
