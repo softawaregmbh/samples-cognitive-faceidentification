@@ -4,19 +4,13 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:local="using:FaceIdentification.UI.Universal"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:v="using:FaceIdentification.UI.Universal.Views"    
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
-        <StackPanel Orientation="Vertical">
-            <TextBox Text="{Binding PersonGuid, Mode=TwoWay}"
-                     Header="GUID" />
+        <v:MainView />
 
-            <TextBox Text="{Binding Name, Mode=TwoWay}"
-                     Header="Name" />
-
-        </StackPanel>
-        
     </Grid>
 </Page>

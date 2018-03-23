@@ -7,7 +7,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FaceIdentification.UI.Unive
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FaceIdentification.CognitiveServices", "CognitiveServices.Face.Identification\FaceIdentification.CognitiveServices.csproj", "{17698B85-FE03-4D5E-B311-80C425C988BA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FaceIdentification", "FaceIdentification\FaceIdentification.csproj", "{E7E1F271-1DD0-441F-9601-45DF23747A39}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FaceIdentification", "FaceIdentification\FaceIdentification.csproj", "{E7E1F271-1DD0-441F-9601-45DF23747A39}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -22,6 +22,8 @@ Global
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{2C8A20A4-FF35-4A3A-8DA1-B608D4035EDF}.Debug|Any CPU.ActiveCfg = Debug|x86
+		{2C8A20A4-FF35-4A3A-8DA1-B608D4035EDF}.Debug|Any CPU.Build.0 = Debug|x86
+		{2C8A20A4-FF35-4A3A-8DA1-B608D4035EDF}.Debug|Any CPU.Deploy.0 = Debug|x86
 		{2C8A20A4-FF35-4A3A-8DA1-B608D4035EDF}.Debug|ARM.ActiveCfg = Debug|ARM
 		{2C8A20A4-FF35-4A3A-8DA1-B608D4035EDF}.Debug|ARM.Build.0 = Debug|ARM
 		{2C8A20A4-FF35-4A3A-8DA1-B608D4035EDF}.Debug|ARM.Deploy.0 = Debug|ARM

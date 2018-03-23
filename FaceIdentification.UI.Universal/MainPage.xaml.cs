@@ -25,23 +25,15 @@ namespace FaceIdentification.UI.Universal
     /// </summary>
     public sealed partial class MainPage : Page
     {
-        private RecognizeViewModel viewModel;
+        private MainViewModel viewModel;
         private IFaceRecognizer faceRecognizer;
 
         public MainPage()
         {
             this.InitializeComponent();
 
-            this.faceRecognizer = new FaceRecognizer("b05b96b84fbb4e72a070603cc0b9471d", Microsoft.Azure.CognitiveServices.Vision.Face.Models.AzureRegions.Westeurope, "demo");
-
-            this.viewModel = new RecognizeViewModel(new UniversalCamera(), this.faceRecognizer);
+            this.viewModel = new MainViewModel(new UniversalCamera());
             this.DataContext = this.viewModel;
-        }
-
-        protected override async void OnNavigatedTo(NavigationEventArgs e)
-        {
-            await this.viewModel.InitializeAsync();
-            base.OnNavigatedTo(e);
         }
     }
 }
