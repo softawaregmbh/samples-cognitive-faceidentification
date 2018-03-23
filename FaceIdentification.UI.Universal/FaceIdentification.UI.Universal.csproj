@@ -106,6 +106,15 @@
     <Compile Include="ViewModels\CreateGroupViewModel.cs" />
     <Compile Include="ViewModels\MainViewModel.cs" />
     <Compile Include="ViewModels\RecognizeViewModel.cs" />
+    <Compile Include="Views\AddFaceView.xaml.cs">
+      <DependentUpon>AddFaceView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\AddPersonView.xaml.cs">
+      <DependentUpon>AddPersonView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\CreateGroupView.xaml.cs">
+      <DependentUpon>CreateGroupView.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\MainView.xaml.cs">
       <DependentUpon>MainView.xaml</DependentUpon>
     </Compile>
@@ -137,6 +146,18 @@
     <Page Include="MainPage.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\AddFaceView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\AddPersonView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\CreateGroupView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Views\MainView.xaml">
       <SubType>Designer</SubType>

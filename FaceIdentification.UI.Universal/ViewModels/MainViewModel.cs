@@ -21,9 +21,13 @@ namespace FaceIdentification.UI.Universal.ViewModels
         private string personGroup;
 
         private CreateGroupViewModel createGroupViewModel;
+        private AddPersonViewModel addPersonViewModel;
+        private AddFaceViewModel addFaceViewModel;
         private RecognizeViewModel recognizeViewModel;
 
         private IFaceRecognizer faceRecognizer;
+
+        private bool isInitialized;
 
         public MainViewModel(ICamera camera)
         {
@@ -33,12 +37,18 @@ namespace FaceIdentification.UI.Universal.ViewModels
             this.PersonGroup = "demo";
 #endif
 
+            this.IsInitialized = false;
+
             this.AvailableAzureRegions = Enum.GetValues(typeof(AzureRegions)).Cast<AzureRegions>();
             this.LoginCommand = new RelayCommand(() =>
             {
                 this.faceRecognizer = new FaceRecognizer(this.SubscriptionKey, this.AzureRegion, this.PersonGroup);
                 this.CreateGroupViewModel = new CreateGroupViewModel(this.faceRecognizer);
                 this.RecognizeViewModel = new RecognizeViewModel(camera, this.faceRecognizer);
+                this.AddFaceViewModel = new AddFaceViewModel(camera, this.faceRecognizer);
+                this.addPersonViewModel = new AddPersonViewModel(camera, this.faceRecognizer);
+
+                this.IsInitialized = true;
             });
         }
 
@@ -76,6 +86,24 @@ namespace FaceIdentification.UI.Universal.ViewModels
         {
             get { return recognizeViewModel; }
             set { this.Set(ref recognizeViewModel, value); }
+        }
+        
+        public AddPersonViewModel MyProperty
+        {
+            get { return addPersonViewModel; }
+            set { this.Set(ref addPersonViewModel, value); }
+        }
+        
+        public AddFaceViewModel AddFaceViewModel
+        {
+            get { return addFaceViewModel; }
+            set { this.Set(ref addFaceViewModel, value); }
+        }
+        
+        public bool IsInitialized
+        {
+            get { return isInitialized; }
+            set { this.Set(ref isInitialized, value); }
         }
 
         public ICommand LoginCommand { get; set; }

@@ -4,6 +4,7 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:local="using:FaceIdentification.UI.Universal.Views"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:v="using:FaceIdentification.UI.Universal.Views"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d"
     d:DesignHeight="300"
@@ -43,6 +44,21 @@
                     Command="{Binding LoginCommand}" />
         </Grid>
 
+        <Pivot IsEnabled="{Binding IsInitialized}" Grid.Row="1">
+            <PivotItem Header="Create group">
+                <v:CreateGroupView DataContext="{Binding CreateGroupViewModel}" />
+            </PivotItem>
+            <PivotItem Header="Add a person">
+                <v:AddPersonView DataContext="{Binding AddPersonViewModel}" />
+            </PivotItem>
+            <PivotItem Header="Add photos to an existing person">
+                <v:AddFaceView DataContext="{Binding AddFaceViewModel}" />
+            </PivotItem>
+            <PivotItem Header="Recognize faces">
+                <v:RecognizeView DataContext="{Binding RecognizeViewModel}" />
+            </PivotItem>
+        </Pivot>
+        
 
     </Grid>
 </UserControl>
