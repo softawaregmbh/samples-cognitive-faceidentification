@@ -4,6 +4,12 @@
     <TargetFramework>netstandard2.0</TargetFramework>
     <AssemblyName>FaceIdentification.CognitiveServices</AssemblyName>
     <RootNamespace>FaceIdentification.CognitiveServices</RootNamespace>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <PackageId>softaware.FaceIdentification.CognitiveServices</PackageId>
+    <Authors>softaware gmbh</Authors>
+    <Product />
+    <Version>0.1.0-preview</Version>
+    <Description>Library for managing and identifying people with the Microsoft Azure Cognitive Service Face API.</Description>
   </PropertyGroup>
 
   <ItemGroup>
